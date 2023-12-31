@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:#EEEEEE;
+  }
+
+  .studentheader{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+.btnaddnewstudents{
+    border-radius: 10px;
+    padding: 10px;
+    color: #738ca4;
+    display: flex;
+  }
+
+  .addStudent{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #000080;
+    color: #ddd;
+  }
+  
+  .popup-form { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .popup-form label, .popup-form input, .popup-form button {
+    border-radius: 10px;
+    color: #000080;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    width: 100%;
+  }
+  
+  #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #191970;
+    margin: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    color: 	#000080;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #B0BEC5;
+  }
+
+  .search-box {
+    margin: 10px 0;
+  }
+
+  .search-box input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  .search-box button {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #191970;
+    padding: 10px;
+    color: #ECEFF1;
+  }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="students.css">
+</head>
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("addStudentForm").style.display = "none";
+    });
+    </script>
+  
+  <!-- it is header of students screen and it contains search box and add new student button -->
+    <div class="studentheader">
+        <div class="search-box">
+            <input type="text" id="searchbox" oninput="searchStudents()" placeholder="Search...">
+            <button onclick="searchStudents()">Search</button>
+        </div>
+        <button class="addStudent" onclick="showAddStudentForm()">Add New Student</button>
+    </div>
+    
+  <table class="students">
+    <thead class="studentTable">
+      <tr>
+        <th>Course ID</th>
+        <th>Student ID</th>
+        <th>Student First Name</th>
+        <th>Student Last Name</th>
+        <th>Midterm</th>
+        <th>Final</th>
+        <th>Score</th>
+        <th>Grade</th>
+        <th>Pass/Fail</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="studentList1">
+      <!-- student rows from studentsData will be dynamically added here -->
+    </tbody>
+    <tbody id="studentList2">
+      <!-- student rows from local storage will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <!-- it is new student form, we enter informations about student to add student -->
+  <div id="addStudentForm" class="popup-form">
+    <span id="closePopup" onclick="closeAddStudentForm()">&times;</span>
+    <form onsubmit="addStudent(); return false;">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" required>
+
+        <label for="studentID">Course ID:</label>
+        <input type="text" id="courseID" required>
+
+        <label for="studentFName">Student First Name:</label>
+        <input type="text" id="studentFName" required>
+
+        <label for="studentLName">Student Last Name:</label>
+        <input type="text" id="studentLName" required>
+
+        <label for="midterm">Midterm:</label>
+        <input type="text" id="midterm" required>
+
+        <label for="final">Final:</label>
+        <input type="text" id="final" required>
+
+        <label for="gradingScale">Grading Scale:</label>
+        <input type="text" id="gradingScale" required>
+
+        <button class="btnaddnewstudents" type="button" onclick="addStudent()">Add Student</button>
+    </form>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
